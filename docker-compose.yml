@@ -1,0 +1,17 @@
+version: '3'
+
+services:    
+  springapi:
+    image: openjdk:8-jre
+    container_name: my_hello_world_app
+    ports:
+      - 8080:8080
+    volumes:
+      - ./target/helloworld-0.0.1-SNAPSHOT:/e/users/
+    command: ["java", "-jar", "/e/users/helloworld-0.0.1-SNAPSHOT.jar"]
+    networks:
+      - backendNetwork  
+  
+networks:
+  backendNetwork:
+            driver: bridge
