@@ -10,7 +10,8 @@ services:
       - ./target/helloworld-0.0.1-SNAPSHOT:/e/users/
     command: ["java", "-jar", "/e/users/helloworld-0.0.1-SNAPSHOT.jar"]
     networks:
-      - backendNetwork  
+      - backendNetwork
+        
   
 networks:
   backendNetwork:
