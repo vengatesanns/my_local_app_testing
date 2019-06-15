@@ -1,7 +1,5 @@
-
 FROM java:8
-ADD ./target/helloworld-0.0.1-SNAPSHOT helloworld.jar
-ECHO ">>>>>> JAR Added Successfully"
+ADD ./target/helloworld-0.0.1-SNAPSHOT.jar helloworld.jar
 EXPOSE 9000
 ENTRYPOINT ["java","-jar","helloworld.jar"]
-ECHO ">>>>>> Docker Image Build Successfully"
+
